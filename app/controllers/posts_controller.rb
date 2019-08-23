@@ -44,7 +44,7 @@ class PostsController < ApplicationController
       redirect_to("/posts/index")
     else
       render("/posts/edit")
-    end 
+    end
   end
 
   def destroy
@@ -54,8 +54,7 @@ class PostsController < ApplicationController
   end
 
   def renew
-    @post = Post.search(params[:label1])
-    redirect_to("posts/index")
+    @post = Post.search(params[:search])
   end
 
 end

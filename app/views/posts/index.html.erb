@@ -3,7 +3,7 @@
         
       <%= form_tag ("/posts/renew"), method: :get do %>
           <div class="posts-index-item">
-            <%= select_tag :label1, options_from_collection_for_select(License.all,:id, :license_name), {include_blank: true} %>
+            <%= select_tag :search, options_from_collection_for_select(License.all,:id, :license_name), {include_blank: true} %>
             ：資格名を選択してください<br>
             <!--<%= select_tag :label2, options_from_collection_for_select(Employee.all, :id, :name),{include_blank: true} %>
             ：氏名を選択してください-->
