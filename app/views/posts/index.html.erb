@@ -1,13 +1,19 @@
 <div class="main posts-index">
     <div class="container">
         
-        
-        <div class="posts-index-item">
-          <%= select_tag :label1, options_from_collection_for_select(License.all,:id, :license_name), {include_blank: true} %>
-          ：資格名を選択してください<br>
-          <%= select_tag :label2, options_from_collection_for_select(Employee.all, :id, :name),{include_blank: true} %>
-          ：氏名を選択してください      
-        </div>    
+      <%= form_tag ("/posts/renew"), method: :get do %>
+          <div class="posts-index-item">
+            <%= select_tag :label1, options_from_collection_for_select(License.all,:id, :license_name), {include_blank: true} %>
+            ：資格名を選択してください<br>
+            <!--<%= select_tag :label2, options_from_collection_for_select(Employee.all, :id, :name),{include_blank: true} %>
+            ：氏名を選択してください-->
+          </div>
+        <input type="submit" value="検索" >
+      <% end %>
+
+        <script>
+          this.class_names.select();
+        </script>    
       
     </div>
 

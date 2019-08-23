@@ -53,5 +53,9 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
 
+  def renew
+    @post = Post.search(params[:label1])
+    redirect_to("posts/index")
+  end
 
 end
