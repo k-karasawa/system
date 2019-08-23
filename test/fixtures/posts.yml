@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  license: MyString
+  license_name: MyString
+  holder_name: MyString
+  date_of_license: 2019-08-14
+
+two:
+  license: MyString
+  license_name: MyString
+  holder_name: MyString
+  date_of_license: 2019-08-14

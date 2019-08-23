@@ -1,0 +1,35 @@
+<div class="main posts-index">
+
+    <div class="container">
+    
+      <div class="posts-index-item">
+        <table>
+        <tr>
+          <th>資格名</th> 　<th>有効期限</th>　 <th>サーベイランス</th>
+        </tr>
+        </table>
+      </div>
+
+         <%= form_tag("/licenses/show")do %>
+            <% @license.each do |license| %>
+              <div class="posts-index-item">
+                <%= link_to(license.license_name, "/licenses/#{license.id}") %>
+                <%= link_to(license.expiration, "/licenses/#{license.id}") %>
+                <%= link_to(license.surveillance, "/licenses/#{license.id}") %>
+                <%= link_to(license.S_recommendation, "/licenses/#{license.id}") %>
+                <%= link_to(license.J_recommendation, "/licenses/#{license.id}") %> 
+              </div>
+            <% end %>
+          <% end %>
+            <div class="posts-index-item">
+
+
+          <%= form_tag("/licenses/new") do %>
+            <input type="submit" value="登録">
+          <% end %>
+        
+
+
+      </div>
+   </div>
+</div>

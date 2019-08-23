@@ -1,0 +1,25 @@
+<div class="main posts-new">
+  <div class="container">
+    <h3 class="form-heading">資格登録</h3>
+
+    <%= form_tag("/posts/create")do %>
+      <div class="form">
+        <div class="form-body">
+            <% @post.errors.full_messages.each do |message| %>
+              <div class="form-error">
+                <%= message %>
+              </div>
+            <% end %>
+          資格名
+          <textarea name="license_name"><%= @post.license_name %></textarea>
+          氏名
+          <textarea name="holder_name"><%= @post.holder_name %></textarea>
+          取得日
+          <textarea name="date_of_license"><%= @post.date_of_license %></textarea>
+          <input type="submit" value="登録">
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>

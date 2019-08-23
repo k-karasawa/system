@@ -1,0 +1,30 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">編集する</h1>
+    
+    <%= form_tag("/posts/#{@post.id}/update") do %>
+    <div class="form">
+      <div class="form-body">
+
+          <!--取得日入力　エラー表示  -->
+         <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+
+          <p>資格名
+            <%= @post.license_name %>
+          </p>
+          <p>取得者
+          <%= @post.holder_name %>
+          </p>
+          取得日
+          <textarea name="date_of_license"><%= @post.date_of_license %></textarea>
+          ※入力は　半角YYYY-MM-DDで入力 
+          <input type="submit" value="保存">
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">編集する</h1>
+    
+    <%= form_tag("/licenses/#{@license.id}/update") do %>
+    <div class="form">
+      <div class="form-body">
+
+          <!--取得日入力　エラー表示  -->
+         <% @license.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+
+          <p>資格名
+          <textarea name="license_name"><%= @license.license_name %></textarea>
+          </p>
+          <p>有効期限</p>
+          <div class="cp_ipradio">
+            <input type="radio" name="expiration" value="無期限" id="a_rb1" />
+            <label for="a_rb1">無期限</label>
+            <input type="radio" name="expiration" value="1年" id="a_rb2" />
+            <label for="a_rb2">1年</label>
+            <input type="radio" name="expiration" value="3年" id="a_rb3" />
+            <label for="a_rb3">3年</label>
+            <input type="radio" name="expiration" value="5年" id="a_rb4" />
+            <label for="a_rb4">5年</label>
+          </div>
+
+          <p>サーベイランス</p>
+            <div class="cp_ipradio">
+            <input type="radio" name="surveillance" value="有" id="b_rb1" />
+            <label for="b_rb1">有</label>
+            <input type="radio" name="surveillance" value="無" id="b_rb2" />
+            <label for="b_rb2">無</label>
+          </div>
+          ※入力は　半角YYYY-MM-DDで入力
+          </p>
+
+          <p>製造推奨年
+          <textarea name="S_recommendation"><%= @license.S_recommendation %></textarea>
+          </p>
+          <p>事務推奨年
+          <textarea name="J_recommendation"><%= @license.J_recommendation %></textarea>
+          </p>
+          <input type="submit" value="保存">
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+

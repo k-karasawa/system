@@ -1,0 +1,49 @@
+<div class="main users-new">
+  <div class="container">
+    <div class="form-heading">新しく資格を追加</div>
+    <div class="form users-form">
+      <div class="form-body">
+        
+        <!--エラー表示用-->
+      <% @license.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+
+        <%= form_tag("/licenses/create") do %>
+          <p>新資格名</p>
+          <input name="license_name" value="<%= @license.license_name %>">
+
+          <p>有効期限</p>
+          <div class="cp_ipradio">
+            <input type="radio" name="expiration" value="無期限" id="a_rb1" />
+            <label for="a_rb1">無期限</label>
+            <input type="radio" name="expiration" value="1年" id="a_rb2" />
+            <label for="a_rb2">1年</label>
+            <input type="radio" name="expiration" value="3年" id="a_rb3" />
+            <label for="a_rb3">3年</label>
+            <input type="radio" name="expiration" value="5年" id="a_rb4" />
+            <label for="a_rb4">5年</label>
+          </div>
+
+          <p>サーベイランス</p>
+            <div class="cp_ipradio">
+            <input type="radio" name="surveillance" value="有" id="b_rb1" />
+            <label for="b_rb1">有</label>
+            <input type="radio" name="surveillance" value="無" id="b_rb2" />
+            <label for="b_rb2">無</label>
+          </div>
+          
+          <p>製造推奨年/p>
+          <input name="S_recommendation" value="<%= @license.S_recommendation %>">
+          
+          <p>事務推奨年</p>
+          <input name="J_recommendation" value="<%= @license.J_recommendation %>">
+
+          <input type="submit" value="登録">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

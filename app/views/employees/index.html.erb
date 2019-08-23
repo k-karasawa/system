@@ -1,0 +1,12 @@
+<div class="main posts-index">
+    <div class="container">
+      <% @employee.each do |employee| %>
+        <div class="posts-index-item">
+                <%= link_to(employee.j_code, "/employees/#{employee.id}") %>
+                <%= link_to(employee.name, "/employees/#{employee.id}") %>
+                <%= link_to(employee.department, "/employees/#{employee.id}") %>
+                <%= link_to(employee.section, "/employees/#{employee.id}") %>
+        </div>
+      <% end %>
+   </div>
+</div>

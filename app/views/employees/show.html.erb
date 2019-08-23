@@ -1,0 +1,71 @@
+<div class="main employeees-show">
+  <div class="container">
+    <div class="employees-show-item">
+        
+        <p>従業員コード
+            <%= @employee.j_code %>
+        </p>
+        
+        <p>氏名
+            <%= @employee.name %>
+        </p>
+
+        <p>部署
+            <%= @employee.department %>
+        </p>
+        
+        <p>課
+            <%= @employee.section %>
+        </p>
+
+        <p>入社年月日
+            <%= @employee.join_date %>
+        </p>
+
+        <p>勤続年数
+            <%= @employee.experience %>
+        </p>
+
+        <p>区分
+            <%= @employee.division %>
+        </p>
+
+        <p>生年月日
+            <%= @employee.date_of_birth %>
+        </p>
+
+        <p>血液型
+            <%= @employee.blood_type %>
+        </p>
+
+        <p>住所
+            <%= @employee.address %>
+        </p>
+
+        <p>phone1
+            <%= @employee.phone1 %>
+        </p>
+
+        <p>phone2
+            <%= @employee.phone2 %>
+        </p>
+
+        <p>最終学歴
+            <%= @employee.education %>
+        </p>
+
+        <p>卒業
+            <%= @employee.graduation %>
+        </p>
+
+        <p>指定学科
+            <%= @employee.specified_dpt %>
+        </p>
+
+      <div class="employee-time">
+        最終更新<br>
+        <%= @employee.updated_at %>
+      </div>
+    </div>
+  </div>
+</div>

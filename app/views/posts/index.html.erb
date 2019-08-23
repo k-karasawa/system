@@ -1,0 +1,23 @@
+<div class="main posts-index">
+    <div class="container">
+        
+        
+        <div class="posts-index-item">
+          <%= select_tag :label1, options_from_collection_for_select(License.all,:id, :license_name), {include_blank: true} %>
+          ：資格名を選択してください<br>
+          <%= select_tag :label2, options_from_collection_for_select(Employee.all, :id, :name),{include_blank: true} %>
+          ：氏名を選択してください      
+        </div>    
+      
+    </div>
+
+    <div class="container">
+      <% @post.each do |post| %>
+        <div class="posts-index-item">
+          <%= link_to(post.license_name, "/posts/#{post.id}") %>
+          <%= link_to(post.holder_name, "/posts/#{post.id}") %>
+          <%= link_to(post.date_of_license, "/posts/#{post.id}") %>
+        </div>
+      <% end %>
+   </div>
+</div>
