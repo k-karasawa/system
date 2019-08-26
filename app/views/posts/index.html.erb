@@ -3,13 +3,22 @@
       取得資格一覧
       <%= form_tag ("/posts/index"), method: :get do %>
           <div class="posts-index-item">
-            <%= select_tag :search, options_from_collection_for_select(License.all,:license_name, :license_name), {include_blank: true} %>
-            ：資格名を選択してください
-              <input type="submit" value="検索" >
+            
+            <!--選択ボックス-->
+
+              <%= select_tag :search, options_from_collection_for_select(License.all,:license_name, :license_name), {include_blank: true} %>
+              
+
+              ：資格名を選択してください
+              <!--検索ボタン-->
+                <input type="submit" value="検索" class="">
+         
           </div>
       <% end %>
     </div>
 
+
+    <!--検索結果表示-->
     <div class="container">
     <%= @post.count%>件
       <% @post.each do |post| %>
@@ -19,5 +28,11 @@
           <%= link_to(post.date_of_license, "/posts/#{post.id}") %>
         </div>
       <% end %>
+      <a class="btn btn-primary" href="#" role="button">Link</a>
+<button class="btn btn-primary" type="submit">Button</button>
+<input class="btn btn-primary" type="button" value="Input">
+<input class="btn btn-primary" type="submit" value="Submit">
+<input class="btn btn-primary" type="reset" value="Reset">
+
    </div>
 </div>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  get 'home/top' => "home#top"
   get "employees/index" => "employees#index"
   get "employees/:id" => "employees#show"
 
@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   post "logout" => "users#logout"
   
   
-  get 'home/top' => "home#top"
+  
   
   root to: "users#login_form"
 
