@@ -22,17 +22,20 @@
     <div class="container">
     <%= @post.count%>件
       <% @post.each do |post| %>
-        <div class="posts-index-item">
-          <%= link_to(post.license_name, "/posts/#{post.id}") %>
-          <%= link_to(post.holder_name, "/posts/#{post.id}") %>
-          <%= link_to(post.date_of_license, "/posts/#{post.id}") %>
-        </div>
-      <% end %>
-      <a class="btn btn-primary" href="#" role="button">Link</a>
-<button class="btn btn-primary" type="submit">Button</button>
-<input class="btn btn-primary" type="button" value="Input">
-<input class="btn btn-primary" type="submit" value="Submit">
-<input class="btn btn-primary" type="reset" value="Reset">
+      <div class="posts-index-item">
 
+          <table class="article_list">
+          <th>
+          <%= link_to(post.license_name, "/posts/#{post.id}") %>
+          </th>
+          <th>
+          <%= link_to(post.holder_name, "/posts/#{post.id}") %>
+          </th>
+          <th>
+          <%= link_to(post.date_of_license, "/posts/#{post.id}") %>
+          </th>
+          </table>
+      </div>
+      <% end %>
    </div>
 </div>
