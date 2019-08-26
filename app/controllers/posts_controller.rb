@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   
   
   def index
-    @post = Post.all.order(date_of_license: :desc)
+    @post = Post.search(params[:search])
+    # 修正前　@post = Post.all.order(date_of_license: :desc)
   end
 
   def new
@@ -51,10 +52,6 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @post.destroy
     redirect_to("/posts/index")
-  end
-
-  def renew
-    @post = Post.search(params[:search])
   end
 
 end
