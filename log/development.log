@@ -36429,3 +36429,887 @@ ActionView::Template::Error ([stdin]:9:31: missing '):
   
 (execjs):1
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__194974232_106854920'
+Started GET "/posts/index" for ::1 at 2019-08-26 15:58:13 +0900
+  [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (1.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (139.4ms)
+Completed 200 OK in 1419ms (Views: 1206.7ms | ActiveRecord: 72.4ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 15:59:24 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (89.4ms)
+Completed 200 OK in 429ms (Views: 358.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 15:59:40 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 504ms (Views: 429.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 15:59:55 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (1.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 336ms (Views: 276.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:01:44 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:8
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (54.7ms)
+Completed 200 OK in 373ms (Views: 313.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=A-2F" for ::1 at 2019-08-26 16:01:51 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"A-2F"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:8
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (64.5ms)
+Completed 200 OK in 377ms (Views: 294.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=A-2F" for ::1 at 2019-08-26 16:02:37 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"A-2F"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (83.2ms)
+Completed 200 OK in 409ms (Views: 341.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=Sfil-V" for ::1 at 2019-08-26 16:02:44 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Sfil-V"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%Sfil-V%')[0m
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%Sfil-V%')[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (95.9ms)
+Completed 200 OK in 391ms (Views: 334.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=A-2F" for ::1 at 2019-08-26 16:03:11 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"A-2F"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.7ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:9
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (75.3ms)
+Completed 200 OK in 385ms (Views: 321.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=A-2F" for ::1 at 2019-08-26 16:03:34 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"A-2F"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:11
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 404ms (Views: 344.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=A-2F" for ::1 at 2019-08-26 16:04:14 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"A-2F"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 398ms (Views: 331.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=A-2F" for ::1 at 2019-08-26 16:04:22 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"A-2F"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:18
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 367ms (Views: 296.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=A-2F" for ::1 at 2019-08-26 16:04:29 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"A-2F"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:18
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 352ms (Views: 287.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=Sfil-F" for ::1 at 2019-08-26 16:04:32 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Sfil-F"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.7ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%Sfil-F%')[0m
+  ↳ app/views/posts/index.html.erb:18
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%Sfil-F%')[0m
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 382ms (Views: 319.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=Sfil-F" for ::1 at 2019-08-26 16:04:43 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Sfil-F"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%Sfil-F%')[0m
+  ↳ app/views/posts/index.html.erb:18
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%Sfil-F%')[0m
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (81.5ms)
+Completed 200 OK in 404ms (Views: 343.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=Sfil-F" for ::1 at 2019-08-26 16:05:25 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Sfil-F"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%Sfil-F%')[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%Sfil-F%')[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 420ms (Views: 354.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=A-2F" for ::1 at 2019-08-26 16:06:36 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"A-2F"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 370ms (Views: 315.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:07:20 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 349ms (Views: 292.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:07:24 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (64.2ms)
+Completed 200 OK in 353ms (Views: 300.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-08-26 16:07:26 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 320ms (Views: 265.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/employees/index" for ::1 at 2019-08-26 16:07:32 +0900
+Processing by EmployeesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  ↳ app/views/employees/index.html.erb:3
+  Rendered employees/index.html.erb within layouts/application (85.2ms)
+Completed 200 OK in 375ms (Views: 286.1ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:11:40 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (1.2ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 299ms (Views: 261.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:11:48 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 345ms (Views: 315.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-08-26 16:11:49 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 243ms (Views: 205.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:11:52 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 274ms (Views: 241.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/employees/index" for ::1 at 2019-08-26 16:11:54 +0900
+Processing by EmployeesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  ↳ app/views/employees/index.html.erb:3
+  Rendered employees/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 263ms (Views: 230.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-08-26 16:14:55 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 166ms (Views: 138.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:19:41 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (69.5ms)
+Completed 200 OK in 373ms (Views: 317.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=Sfil-F" for ::1 at 2019-08-26 16:19:46 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Sfil-F"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%Sfil-F%')[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%Sfil-F%')[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 380ms (Views: 317.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:19:57 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 371ms (Views: 305.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-08-26 16:19:58 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 320ms (Views: 265.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-08-26 16:20:00 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 321ms (Views: 266.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:20:01 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 339ms (Views: 284.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/employees/index" for ::1 at 2019-08-26 16:20:12 +0900
+Processing by EmployeesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  ↳ app/views/employees/index.html.erb:3
+  Rendered employees/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 350ms (Views: 290.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/employees/index" for ::1 at 2019-08-26 16:20:31 +0900
+Processing by EmployeesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  ↳ app/views/employees/index.html.erb:3
+  Rendered employees/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 320ms (Views: 264.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/employees/1" for ::1 at 2019-08-26 16:20:36 +0900
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mEmployee Load (9.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/employees_controller.rb:8
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 401ms (Views: 306.2ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:20:50 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 412ms (Views: 349.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts/index?utf8=%E2%9C%93&search=A-2F" for ::1 at 2019-08-26 16:20:57 +0900
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"A-2F"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.4ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (license_name LIKE '%A-2F%')[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 430ms (Views: 376.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:21:52 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (68.1ms)
+Completed 200 OK in 405ms (Views: 343.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-08-26 16:21:57 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 351ms (Views: 286.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:22:01 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 336ms (Views: 281.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-08-26 16:22:08 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 299ms (Views: 240.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:22:09 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 330ms (Views: 272.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:22:44 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 399ms (Views: 343.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/posts/index" for ::1 at 2019-08-26 16:23:01 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.7ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 425ms (Views: 357.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/employees/index" for ::1 at 2019-08-26 16:23:16 +0900
+Processing by EmployeesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT `employees`.* FROM `employees`[0m
+  ↳ app/views/employees/index.html.erb:3
+  Rendered employees/index.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 377ms (Views: 308.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:23:26 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 355ms (Views: 299.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:24:35 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 442ms (Views: 377.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:24:50 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 396ms (Views: 352.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:24:52 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:15
+  Rendered licenses/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 355ms (Views: 287.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:25:07 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:10
+  Rendered licenses/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 333ms (Views: 275.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:25:29 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:10
+  Rendered licenses/index.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 395ms (Views: 322.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:26:13 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 387ms (Views: 300.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:26:47 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:13
+  Rendered licenses/index.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 342ms (Views: 276.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:27:03 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 356ms (Views: 288.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:27:05 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.8ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 337ms (Views: 281.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:27:10 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.8ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (74.1ms)
+Completed 200 OK in 642ms (Views: 450.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:27:15 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (1.4ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 432ms (Views: 371.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:27:17 +0900
+Started POST "/licenses/new" for ::1 at 2019-08-26 16:27:17 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (33.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 410ms (Views: 252.6ms | ActiveRecord: 34.3ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by LicensesController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FhBeF/ytwgOiqnThwv9cU1B+DzRigkZ3oLDfv0qR7nuby6/4RPeQFCDAp5lSAMEIK0pvL128T0/1wBByaylF7A=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/new.html.erb within layouts/application
+  Rendered licenses/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 334ms (Views: 300.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:27:26 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.5ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:14
+  Rendered licenses/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 362ms (Views: 299.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:28:21 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:12
+  Rendered licenses/index.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 374ms (Views: 309.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:28:23 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (1.0ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:12
+  Rendered licenses/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 329ms (Views: 272.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:29:25 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:10
+  Rendered licenses/index.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 343ms (Views: 283.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:29:29 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:10
+  Rendered licenses/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 340ms (Views: 282.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-08-26 16:29:30 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 368ms (Views: 312.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:29:33 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (1.3ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:10
+  Rendered licenses/index.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 367ms (Views: 304.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-08-26 16:29:34 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 324ms (Views: 271.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:29:40 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:10
+  Rendered licenses/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 297ms (Views: 243.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/licenses/index" for ::1 at 2019-08-26 16:30:06 +0900
+Processing by LicensesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  Rendering licenses/index.html.erb within layouts/application
+  [1m[36mLicense Load (0.6ms)[0m  [1m[34mSELECT `licenses`.* FROM `licenses`[0m
+  ↳ app/views/licenses/index.html.erb:10
+  Rendered licenses/index.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 338ms (Views: 286.3ms | ActiveRecord: 1.1ms)
+
+
