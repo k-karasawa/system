@@ -291,5 +291,18 @@
     font-size: 14px;
   }
   
-  
+  table.article_list {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 6px 0px;
+  }
+  table.article_list th {
+    padding: 0px;
+    text-align: left;
+  }
+  table.article_list td {
+    padding: 2px 0px 2px 8px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
  
