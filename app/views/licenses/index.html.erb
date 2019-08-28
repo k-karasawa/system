@@ -1,33 +1,38 @@
 <div class="main posts-index">
-
-    <div class="container">
-        <h3>登録資格管理</h3>
-          <%= form_tag("/licenses/new") do %>
-            <input type="submit" value="新規登録">
-          <% end %>
-       
-         <%= form_tag("/licenses/show")do %>
+  <div class="container">
+    <br></br><br></br>
+      <h3>登録資格管理</h3>
+        <%= form_tag("/licenses/new") do %>
+          <input type="submit" value="新規登録" class="btn btn-outline-info btn-sm">
+        <% end %>
 
         <!--カラム名表示-->
-         <table class="article_list">
-          <th>資格名</th><th>有効期限</th><th>サーベイ</th><th>製造推奨</th><th>事務推奨</th>
-         </table>
+        <table class="table table-hover">
+          <thead>
+            <th>
+              <th>資格名</th>
+              <th>有効期限</th>
+              <th>サーベイランス</th>
+              <th>製造推奨</th>
+              <th>事務推奨</th>
+              <th colspan="3"></th>
+            </th>
+          </thead>
 
-            <% @license.each do |license| %>
-              <div class="posts-index-item">
-               <table class="article_list">
-                <th><%= link_to(license.license_name, "/licenses/#{license.id}") %></th>
-                <th><%= link_to(license.expiration, "/licenses/#{license.id}") %></th>
-                <th><%= link_to(license.surveillance, "/licenses/#{license.id}") %></th>
-                <th><%= link_to(license.S_recommendation, "/licenses/#{license.id}") %></th>
-                <th><%= link_to(license.J_recommendation, "/licenses/#{license.id}") %></th>
-              </table>
-              </div>
-              
-            <% end %>
-            
-          <% end %>
+          <!--リスト表示-->
           
-        
-   </div>
+            <% @license.each do |license| %>
+              <tbody>
+                <th>
+                  <th><%= link_to(license.license_name, "/licenses/#{license.id}") %></th>
+                  <th><%= link_to(license.expiration, "/licenses/#{license.id}") %></th>
+                  <th><%= link_to(license.surveillance, "/licenses/#{license.id}") %></th>
+                  <th><%= link_to(license.S_recommendation, "/licenses/#{license.id}") %></th>
+                  <th><%= link_to(license.J_recommendation, "/licenses/#{license.id}") %></th>
+                </th>
+              </tbody>
+            <% end %>
+        </table>
+         
+  </div>
 </div>

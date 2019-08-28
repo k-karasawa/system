@@ -5,8 +5,6 @@
  <br></br>
 <h2>取得一覧</h2>
 
-
-<div class="main posts-index">
     <div class="container" class="dropdown">
       <%= form_tag ("/posts/index"), method: :get do %>
       <div class="btn-group">
@@ -20,7 +18,7 @@
             <input type="submit" value="検索" class="btn btn-outline-info btn-sm">     
           </div>
       <% end %>
-    </div>
+    
 
     <!--検索結果表示-->
     <div class="form">
@@ -39,16 +37,15 @@
    
 
       <!--リスト表示-->
-    <tbody>
-      <% @post.each do |post| %>
-      <tr>
-        <th><%= link_to(post.license_name, "/posts/#{post.id}") %></th>
-        <th><%= link_to(post.holder_name, "/posts/#{post.id}") %></th>
-        <th><%= link_to(post.date_of_license, "/posts/#{post.id}") %></th>
-      <tr>
-      <% end %>
-    </tbody>
-      </table>
+        <tbody>
+          <% @post.each do |post| %>
+            <tr>
+              <th><%= link_to(post.license_name, "/posts/#{post.id}") %></th>
+              <th><%= link_to(post.holder_name, "/posts/#{post.id}") %></th>
+              <th><%= link_to(post.date_of_license, "/posts/#{post.id}") %></th>
+            <tr>
+          <% end %>
+        </tbody>
+    </table>
    </div>
-
 </div>
