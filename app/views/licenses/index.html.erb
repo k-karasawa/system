@@ -1,21 +1,32 @@
-<div class="main posts-index">
 
-    <div class="container">
-        <h2>登録資格管理</h2>
-          <%= form_tag("/licenses/new") do %>
-            <input type="submit" value="新規登録">
-          <% end %>
+<div class="container">
+  <br></br><br></br>
+      <h3>登録資格管理</h3>
+    <!--登録ボタン-->
+        <%= form_tag("/licenses/new") do %>
+          <input type="submit" value="新規登録" class="btn btn-outline-info btn-sm">
+        <% end %>
+        <br></br>
 
-         <%= form_tag("/licenses/show")do %>
-            <% @license.each do |license| %>
-              <div class="posts-index-item">
-                <%= link_to(license.license_name, "/licenses/#{license.id}") %>
-                <%= link_to(license.expiration, "/licenses/#{license.id}") %>
-                <%= link_to(license.surveillance, "/licenses/#{license.id}") %>
-                <%= link_to(license.S_recommendation, "/licenses/#{license.id}") %>
-                <%= link_to(license.J_recommendation, "/licenses/#{license.id}") %> 
-              </div>
-            <% end %>
-          <% end %>
-   </div>
-</div>
+    <!--カラム名表示-->
+    <table id="dtBasicExample" class="table table-hover table table-bordered table-sm" cellspacing="0" width="100%">
+      <thead>
+          <th class="th-sm">資格名</th>
+          <th class="th-sm">有効期限</th>
+          <th class="th-sm">サーベイランス</th>
+          <th class="th-sm">製造推奨</th>
+          <th class="th-sm">事務推奨</th>
+      </thead>
+
+          <!--リスト表示-->    
+      <% @license.each do |license| %>
+        <tbody>
+            <th><%= link_to(license.license_name, "/licenses/#{license.id}") %></th>
+            <th><%= link_to(license.expiration, "/licenses/#{license.id}") %></th>
+            <th><%= link_to(license.surveillance, "/licenses/#{license.id}") %></th>
+            <th><%= link_to(license.S_recommendation, "/licenses/#{license.id}") %></th>
+            <th><%= link_to(license.J_recommendation, "/licenses/#{license.id}") %></th>
+        </tbody>
+      <% end %>
+    </table>
+</div

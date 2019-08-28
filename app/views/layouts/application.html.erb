@@ -1,61 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+
   <head>
     <title>資格管理システム</title>
     <%= csrf_meta_tags %>
-
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header>
-      <div class="header-logo">
-        資格管理システム
-      </div>
-      <ul class="header-menus">
-					
+			<nav class="navbar navbar-expand navbar-dark bg-info fixed-top">
+				<a class="navbar-brand" href="#">資格管理システム</a>
+
+
+				<ul class="navbar-nav ml-auto">	
 					<% if @current_user %>
-						<li>
+						<li class="nav-item">
 							ログインユーザー : 
 							<%= @current_user.user_name %>さん
 						</li>
 						
-						<li>
+						<li class="nav-item">
 							<%= link_to("取得一覧", "/posts/index") %>
 						</li>	
 						
-						<li>
+						<li class="nav-item">
 							<%= link_to("取得登録", "/posts/new") %>
 						</li>
 						
-						<li>
+						<li class="nav-item">
 							<%= link_to("資格一覧", "/licenses/index") %>
 						</li>
 
-						<li>
+						<li class="nav-item">
 							<%= link_to("従業員管理", "/employees/index") %>
 						</li>
 
-						<li>
+						<li class="nav-item">
 							<%= link_to("ログアウト", "/logout", {method: :post}) %>
 						</li>
 
 					<% else %>
-						<li>
+						<li class="nav-item">
 							<%= link_to("新規利用登録", "/signup") %>
 						</li>
 					<% end %>
-        
-      </ul>
-    </header>
+				</ul>
 
-    <% if flash[:notice] %>
-      <div class="flash">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-	
-    <%= yield %>
-  </body>
+				<% if flash[:notice] %>
+					<div class="flash">
+				<%= flash[:notice] %>
+				
+				</div>
+					<% end %>
+				</nav>-->
+
+		<div class="container">
+			<%= yield %>
+		</div>
+
+	</body>
 </html>
+
+
+
