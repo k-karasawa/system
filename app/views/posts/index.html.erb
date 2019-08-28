@@ -1,25 +1,33 @@
+
+<p id="notice"><%= notice %></p>
+ 
+ <!--title-->
+ <br></br>
+<h2>取得一覧</h2>
+
+
 <div class="main posts-index">
-    <div class="container">
-      取得資格一覧
+    <div class="container" class="dropdown">
       <%= form_tag ("/posts/index"), method: :get do %>
+      <div class="btn-group">
           <div class="posts-index-item">
             <!--選択ボックス-->
-              <%= select_tag :search, options_from_collection_for_select(License.all,:license_name, :license_name), {include_blank: true} %>
-              ：資格名を選択してください
+            <%= select_tag :search, options_from_collection_for_select(License.all,:license_name, :license_name), {include_blank: true} %>
+         
+              ：資格名を選択してください　
               <!--検索ボタン-->
-              <div class="form">
-              <input type="submit" value="検索">
-              </div>
+          </div>
+            <input type="submit" value="検索" class="btn btn-outline-info btn-sm">     
           </div>
       <% end %>
     </div>
 
-
     <!--検索結果表示-->
+    <div class="form">
       <%= @post.count%>件
-   
+    </div>
       <!--カラム名-->
-    <table class="table">
+    <table class="table table-hover">
       <thead>
         <tr>
           <th>資格名</th>
@@ -28,6 +36,7 @@
           <th colspan="3"></th>
         </tr>
       </thead>
+   
 
       <!--リスト表示-->
     <tbody>
