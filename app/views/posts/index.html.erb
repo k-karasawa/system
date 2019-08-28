@@ -8,7 +8,7 @@
               ：資格名を選択してください
               <!--検索ボタン-->
               <div class="form">
-              <input type="submit" value="検索" class="">
+              <input type="submit" value="検索">
               </div>
           </div>
       <% end %>
@@ -16,23 +16,30 @@
 
 
     <!--検索結果表示-->
-    <div class="container">
       <%= @post.count%>件
    
-    <!--カラム名-->
-    <table class="article_list">
-      <th>資格名</th><th>氏名</th><th>取得日</th>
-    </table>
+      <!--カラム名-->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>資格名</th>
+          <th>氏名</th>
+          <th>取得日</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-    <!--リスト表示-->
+      <!--リスト表示-->
+    <tbody>
       <% @post.each do |post| %>
-      <div class="posts-index-item">
-          <table class="article_list">
-          <th><%= link_to(post.license_name, "/posts/#{post.id}") %></th>
-          <th><%= link_to(post.holder_name, "/posts/#{post.id}") %></th>
-          <th><%= link_to(post.date_of_license, "/posts/#{post.id}") %></th>
-          </table>
-      </div>
+      <tr>
+        <th><%= link_to(post.license_name, "/posts/#{post.id}") %></th>
+        <th><%= link_to(post.holder_name, "/posts/#{post.id}") %></th>
+        <th><%= link_to(post.date_of_license, "/posts/#{post.id}") %></th>
+      <tr>
       <% end %>
+    </tbody>
+      </table>
    </div>
+
 </div>
