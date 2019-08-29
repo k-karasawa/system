@@ -1,37 +1,32 @@
-
-<p id="notice"><%= notice %></p>
- 
- <!--title-->
- <br></br>
+<div class="container">
+<br></br><br></br>
 <h2>取得一覧</h2>
-
-    <div class="container" class="dropdown">
+  
       <%= form_tag ("/posts/index"), method: :get do %>
       <div class="btn-group">
           <div class="posts-index-item">
             <!--選択ボックス-->
-            <%= select_tag :search, options_from_collection_for_select(License.all,:license_name, :license_name), {include_blank: true} %>
-         
+            <%= select_tag :search, options_from_collection_for_select(License.all,:license_name, :license_name), {include_blank: true} %>   
               ：資格名を選択してください　
               <!--検索ボタン-->
           </div>
             <input type="submit" value="検索" class="btn btn-outline-info btn-sm">     
           </div>
       <% end %>
-    
+  <br></br>  
 
     <!--検索結果表示-->
-    <div class="form">
+    <div class="container">
       <%= @post.count%>件
     </div>
-      <!--カラム名-->
-    <table class="table table-hover">
+
+    <!--カラム名-->
+      <table id="dtBasicExample" class="tbset table table-hover table table-sm" cellspacing="0" width="100%">
       <thead>
         <tr>
-          <th>資格名</th>
-          <th>氏名</th>
-          <th>取得日</th>
-          <th colspan="3"></th>
+          <th class="th-sm">資格名</th>
+          <th class="th-sm">氏名</th>
+          <th class="th-sm">取得日</th>
         </tr>
       </thead>
    
@@ -40,9 +35,9 @@
         <tbody>
           <% @post.each do |post| %>
             <tr>
-              <th><%= link_to(post.license_name, "/posts/#{post.id}") %></th>
-              <th><%= link_to(post.holder_name, "/posts/#{post.id}") %></th>
-              <th><%= link_to(post.date_of_license, "/posts/#{post.id}") %></th>
+              <td><%= link_to(post.license_name, "/posts/#{post.id}") %></td>
+              <td><%= link_to(post.holder_name, "/posts/#{post.id}") %></td>
+              <td><%= link_to(post.date_of_license, "/posts/#{post.id}") %></td>
             <tr>
           <% end %>
         </tbody>

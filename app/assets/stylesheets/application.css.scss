@@ -1,1 +1,13 @@
+
+
+
+/*リンク色調整*/
+  a {  color: #00a8eb;  }
+  a:link {  color: #00a8eb;  }
+  a:visited {  color: #00a8eb;  }
+  a:hover {  color:#eba286;   }  
+  a:active {  color:#bcddeb;  }
+
+  /*boot strapインポート　消さない*/
  @import "bootstrap";
+
