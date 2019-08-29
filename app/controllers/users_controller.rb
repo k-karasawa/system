@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 		  	@error_message = "ログイン情報に誤りがあります"
 		  
 		  	@user_id = params[:user_id]
-		  	#@password = params[:password]　パスワードは保持しない
+		  	#@password = params[:password]　パスワードは保持しないにしようかな
 		  	render("users/login_form")
 		end
 	end

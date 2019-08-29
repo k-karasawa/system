@@ -1,10 +1,8 @@
 class PostsController < ApplicationController
   before_action :authenticate_user
   
-  
   def index
     @post = Post.search(params[:search])
-    # 修正前　@post = Post.all.order(date_of_license: :desc)
   end
 
   def new
@@ -49,6 +47,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    flash[:notice] = "取得資格を削除しました"
     @post = Post.find_by(id: params[:id])
     @post.destroy
     redirect_to("/posts/index")

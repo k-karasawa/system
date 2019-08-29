@@ -9,88 +9,19 @@
   </head>
 
   <body>
-	<!--Navbar -->
-	<nav class="mb-1 navbar navbar-expand navbar-dark fixed-top" style="background-color:#2fb5eb;">
-  	<a class="navbar-brand" href="#">資格管理システム</a>
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
-    		aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
-    		<span class="navbar-toggler-icon"></span>
-  		</button>
-
-  	<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">
-						<i class="fab fa-facebook-f"></i> Facebook
-						<span class="sr-only">(current)</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">
-						<i class="fab fa-instagram"></i> Instagram</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false">
-						<i class="fas fa-user"></i> Profile </a>
-					<div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-						<a class="dropdown-item" href="#">My account</a>
-						<a class="dropdown-item" href="#">Log out</a>
-					</div>
-				</li>
-    </ul>
-  </div>
-</nav>
-<!--/.Navbar
-			<nav class="navbar navbar-expand navbar-dark bg-info fixed-top">
-				<a class="navbar-brand" href="#">資格管理システム</a>
+	<% if flash[:notice] %>
+	<div class="flash">
+	<%= flash[:notice] %>
+	</div>
+	<% end %>
 
 
-				<ul class="navbar-nav ml-auto">	
-					<% if @current_user %>
-						<li class="nav-item">
-							ログインユーザー : 
-							<%= @current_user.user_name %>さん
-						</li>
-						
-						<li class="nav-item">
-							<%= link_to("取得一覧", "/posts/index") %>
-						</li>	
-						
-						<li class="nav-item">
-							<%= link_to("取得登録", "/posts/new") %>
-						</li>
-						
-						<li class="nav-item">
-							<%= link_to("資格一覧", "/licenses/index") %>
-						</li>
-
-						<li class="nav-item">
-							<%= link_to("従業員管理", "/employees/index") %>
-						</li>
-
-						<li class="nav-item">
-							<%= link_to("ログアウト", "/logout", {method: :post}) %>
-						</li>
-
-					<% else %>
-						<li class="nav-item">
-							<%= link_to("新規利用登録", "/signup") %>
-						</li>
-					<% end %>
-				</ul>
-
-				<% if flash[:notice] %>
-					<div class="flash">
-				<%= flash[:notice] %>
-				
-				</div>
-					<% end %>
-				</nav>-->
-
-		<div class="container">
-			<%= yield %>
-		</div>
+	<%= render 'layouts/alert' %>
+	<div class="container">
+		<br></br><br></br>
+		<%= yield %>
+		<%= render "layouts/navigation" %>
+	</div>
 
 	</body>
 </html>

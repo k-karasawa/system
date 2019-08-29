@@ -1,0 +1,52 @@
+
+	<!--Navbar -->
+	<nav class="mb-1 navbar navbar-expand navbar-dark fixed-top" style="background-color:#2fb5eb;">
+  	<a class="navbar-brand" href="#">資格管理システム</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+    		aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+
+  	<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+        <ul class="navbar-nav ml-auto">
+
+            <!--ナビバーメニュー-->
+            <% if @current_user %>
+                <li class="nav-item active">
+                <a class="nav-link" href="#">ログインユーザー：<%= @current_user.user_name %>さん　　</a>
+            </li>
+
+            <li class="nav-item active">	
+                <a class="nav-link" href="/posts/index">取得一覧</a>
+            </li>
+            
+            <li class="nav-item active">
+                <a class="nav-link" href="/posts/new">取得登録</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="/employees/index">従業員管理</a>
+            </li>
+
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>資格一覧</a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                    <a class="dropdown-item" href="/licenses/index">資格一覧</a>
+                    <a class="dropdown-item" href="/licenses/new">資格登録</a>
+                </div>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" data-method="post" href="/logout">ログアウト</a>
+            </li>
+
+            <% else %>
+            <li class="nav-item active">
+                <a class="nav-link" href="/signup">利用登録</a>
+            </li>
+            <% end %>	
+        </ul>
+  </div>
+</nav>
