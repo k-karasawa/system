@@ -1,24 +1,17 @@
-
-<div class="container">
-  <br></br>
-  <h3 class="form-heading">資格登録</h3>
-
-  <%= form_tag("/posts/create")do %>
-    <div class="form">
-      <div class="form-body">
-          <% @post.errors.full_messages.each do |message| %>
-            <div class="form-error">
-              <%= message %>
-            </div>
-          <% end %>
-        資格名
-        <textarea name="license_name"><%= @post.license_name %></textarea>
-        氏名
-        <textarea name="holder_name"><%= @post.holder_name %></textarea>
-        取得日
-        <textarea name="date_of_license"><%= @post.date_of_license %></textarea>
-        <input type="submit" value="登録">
-      </div>
-    </div>
+<div class="container">  
+  <%= form_tag("/posts/create", id: "contact") do %>
+    <h3>取得登録</h3>
+    <h4>新規取得情報を登録します</h4>
+    <fieldset>
+      <input name="license_name" placeholder="取得した資格名を入力" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input name="holder_name" placeholder="資格取得者の氏名を入力" type="text" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input name="date_of_license" placeholder="取得日を入力" type="text" tabindex="3" required>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
   <% end %>
 </div>

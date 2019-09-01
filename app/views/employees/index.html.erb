@@ -1,29 +1,27 @@
-
 <div class="container">
-<br></br><br></br>
-      <h3>従業員情報</h3>
-      <br></br>
+    <h3>従業員情報</h3>
+    <br></br>
 
-<table id="dtBasicExample" class="table table-hover table table-bordered table-sm" cellspacing="0" width="100%">
-<!--カラム名表示-->
-  <thead>
-    <tr>
-      <th class="th-sm">従業員コード</th>
-      <th class="th-sm">氏名</th>
-      <th class="th-sm">部署</th>
-      <th class="th-sm">課</th>
-    </tr>
-  </thead>
+  <table id="dtBasicExample" class="tbset table table-hover table table-sm" cellspacing="0" width="100%">
+  <!--カラム名表示-->
+    <thead>
+      <tr>
+        <th class="th-sm">従業員コード</th>
+        <th class="th-sm">氏名</th>
+        <th class="th-sm">部署</th>
+        <th class="th-sm">課</th>
+      </tr>
+    </thead>
 
-  <% @employee.each do |employee| %>
-  <tbody>
-    <tr>
-      <td><%= link_to(employee.j_code, "/employees/#{employee.id}") %></td>
-      <td><%= link_to(employee.name, "/employees/#{employee.id}") %></td>
-      <td><%= link_to(employee.department, "/employees/#{employee.id}") %></td>
-      <td><%= link_to(employee.section, "/employees/#{employee.id}") %></td>
-    </tr>
-  </tbody>
-  <% end %>
-
-</table>
+    <% @employee.each do |employee| %>
+    <tbody>
+      <tr>
+        <td><%= link_to(employee.j_code, "/employees/#{employee.id}") %></td>
+        <td><%= link_to(employee.name, "/employees/#{employee.id}") %></td>
+        <td><%= link_to(employee.department, "/employees/#{employee.id}") %></td>
+        <td><%= link_to(employee.section, "/employees/#{employee.id}") %></td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</div>

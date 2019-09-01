@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   get "licenses/:id/edit" => "licenses#edit"
 
   
-  get "posts/renew" => "posts#renew"
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
   get "posts/:id" => "posts#show"
