@@ -1,16 +1,16 @@
 <div class="container">
   <%= form_tag("/licenses/index", id: "contact", method: :get) do %>
     <h3>詳細</h3>
-    <br></br>
-    <p>資格名　：<%= @license.license_name %></p>
-    <p>有効期限：<%= @license.expiration %></p>
-    <p>取得日　：<%= @license.surveillance%></p>
+    <h4>編集は編集画面より行ってください</h4>
+    <p>資格名　　　　：<input value="<%= @license.license_name %>" class="col-sm-5" name="license_name" readonly="disabule" type="text"></p>
+    <p>有効期限　　　：<input value="<%= @license.expiration %>" class="col-sm-5" name="license_name" readonly="disabule" type="text"></p>
+    <p>サーベイランス：<input value="<%= @license.surveillance %>" class="col-sm-5" name="license_name" readonly="disabule" type="text"></p>
     <br></br>
     <h4>最終更新</h4>
     <h4>
       <%= @license.last_editor %>
       <%= @license.updated_at %>
     </h4>      
-    <button class="col-sm-1" name="submit" type="submit" id="contact-submit" data-submit="...Sending">戻る</button>
+    <button class="col-sm-1" name="submit" type="submit" id="contact-submit" data-submit="...Sending" required autofocus>戻る</button>
   <% end %>
 </div>

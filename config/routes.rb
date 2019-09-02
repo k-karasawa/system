@@ -29,8 +29,8 @@ Rails.application.routes.draw do
   get "signup" => "users#new"
   post "login" => "users#login"
   post "logout" => "users#logout"
-  
-  
+  get "login_form" => "users#login"
+  get "login" => "users#login_form"
   
   
   root to: "users#login_form"

@@ -9,16 +9,9 @@
   </head>
 
   <body>
-	<% if flash[:notice] %>
-	<div class="flash">
-	<%= flash[:notice] %>
-	</div>
-	<% end %>
-
 
 	<%= render 'layouts/alert' %>
 	<div class="container">
-	
 		<%= render "layouts/navigation" %>
 		<br></br><br></br>
 		<%= yield %>

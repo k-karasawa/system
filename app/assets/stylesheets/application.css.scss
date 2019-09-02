@@ -1,6 +1,6 @@
 /*radio btn*/
 $color1: #f4f4f4;
-$color2: #3197EE;
+$color2: #F96;
 
 .radio {
   margin: 0.5rem;
@@ -59,7 +59,6 @@ $color2: #3197EE;
     }
   }
 }
-
 
 /*入力フォーム用*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
@@ -209,34 +208,6 @@ fieldset {
 }
 
 
-/*naviリンク用CSS*/
-.border_slide_btn {
-    position: relative;
-    display: inline-block;
-    color: #1B1B1B;
-    text-decoration: none;
-  }
-  .border_slide_btn:hover {
-    cursor: pointer;
-    text-decoration: none;
-  }
-  .border_slide_btn::after {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 1px;
-    background: #ffffff;
-    transform: scale(0, 1);
-    transform-origin: right top;
-    transition: transform .40s;
-  }
-  .border_slide_btn:hover::after {
-    transform-origin: left top;
-    transform: scale(1, 1);
-  }
-
 /*アラート使用*/
 .alert {
 	text-align: center;
@@ -262,4 +233,6 @@ fieldset {
 
   /*boot strapインポート　消さない*/
  @import "bootstrap";
+ @import "users";
+ @import "navi";
 

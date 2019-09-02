@@ -1,22 +1,18 @@
-<div class="main users-new">
-  <div class="container">
-    <div class="form-heading">ログイン</div>
-    <div class="form users-form">
-      <div class="form-body">
-        
-        <% if @error_message %>
+<body class="text-center">
+  <%= form_tag("/login", class: "signin") do %>
+    <%= image_tag('bibi.png', :size => '110x110')%>
+    <h1 class="h3 mb-3 font-weight-normal">資格管理システム</h1>
+    <!--エラー表示用-->
+    <% if @error_message %>
           <div class="form-error">
             <%= @error_message %>
           </div>
         <% end %>
-        <%= form_tag("/login") do %>
-          <p>従業員コード</p>
-          <input name="user_id" value="<%= @user_id %>">
-          <p>パスワード</p>
-          <input type="password" name="password">
-          <input type="submit" value="ログイン">
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
+
+    <!--入力フォーム-->
+    <input value="<%= @user_id %>" name="user_id" type="text" id="inputEmail" class="form-control" placeholder="従業員コード" required autofocus>
+    <input name="password" type="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color:#00bfff" >サインイン</button>
+    <% end %>
+    <p class="mt-5 mb-3 text-muted">&copy; 影山鉄工所</p>
+</body>
