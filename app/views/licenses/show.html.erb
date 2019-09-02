@@ -1,27 +1,16 @@
-<div class="main posts-show">
-  <div class="container">
-    <div class="posts-show-item">
-      <p>資格名
-        <%= @license.license_name %>
-      </p>
-      <p>有効期限
-        <%= @license.expiration %>
-      </p>
-      <p>サーベイランス
-        <%= @license.surveillance%>
-      </p>
-      
-      <div class="post-time">
-        最終更新<br>
-        <%= @license.last_editor %>
-        <%= @license.updated_at %>
-      </div>
-      
-      <div class="post-menus">
-        <%= link_to("戻る", "/licenses/index") %>      
-        <%= link_to("編集", "/licenses/#{@license.id}/edit") %>
-        <%= link_to("削除", "/licenses/#{@license.id}/destroy",{method:"post"}) %>
-      </div>
-    </div>
-  </div>
+<div class="container">
+  <%= form_tag("/licenses/index", id: "contact", method: :get) do %>
+    <h3>詳細</h3>
+    <br></br>
+    <p>資格名　：<%= @license.license_name %></p>
+    <p>有効期限：<%= @license.expiration %></p>
+    <p>取得日　：<%= @license.surveillance%></p>
+    <br></br>
+    <h4>最終更新</h4>
+    <h4>
+      <%= @license.last_editor %>
+      <%= @license.updated_at %>
+    </h4>      
+    <button class="col-sm-1" name="submit" type="submit" id="contact-submit" data-submit="...Sending">戻る</button>
+  <% end %>
 </div>

@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>取得一覧</h2>
+  <h3>取得一覧</h3>
     <%= form_tag ("/posts/index"), method: :get do %>
       <div class="btn-group">
         <div class="posts-index-item">
@@ -18,10 +18,7 @@
       <%= @post.count%>件　
     <!--クリアボタン-->
       <a href="/posts/index" class="border_slide_btnm">クリア</a>
-
     </div>
-
-
 
     <!--カラム名-->
     <table id="dtBasicExample" class="tbset table table-hover table table-sm" tbcl cellspacing="0" width="100%">
@@ -31,6 +28,7 @@
           <th class="th-sm">氏名</th>
           <th class="th-sm">取得日</th>
           <th class="th-sm">編集</th>
+          <th class="th-sm">削除</th>
         </tr>
       </thead>
    
@@ -42,8 +40,8 @@
             <td><%= link_to(post.license_name, "/posts/#{post.id}") %></td>
             <td><%= link_to(post.holder_name, "/posts/#{post.id}") %></td>
             <td><%= link_to(post.date_of_license, "/posts/#{post.id}") %></td>
-            <td><%= link_to("✔","/posts/#{post.id}/edit")%>
-            </td>
+            <td><%= link_to("✔","/posts/#{post.id}/edit")%></td>
+            <td><%= link_to("✖","/posts/#{post.id}/destroy", method: :post)%></td>
           <tr>
         <% end %>
       </tbody>

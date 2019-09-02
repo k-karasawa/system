@@ -1,27 +1,16 @@
-
-  <div class="container">
-      <p>資格名
-        <%= @post.license_name %>
-      </p>
-      <p>取得者
-        <%= @post.holder_name %>
-      </p>
-      <p>取得日
-        <%= @post.date_of_license%>
-      </p>
-      <br>
-      <div class="post-time">
-        最終更新<br></br>
-        <%= @post.last_editor %>
-        <%= @post.updated_at %>
-      </div>
-      
-      <div class="post-menus">
-        <%= link_to("戻る", "/posts/index") %>      
-        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
-        <%= link_to("削除", "/posts/#{@post.id}/destroy",{method:"post"}) %>
-      </div>
-    </div>
-
-
-
+<div class="container">
+  <%= form_tag("/posts/index", id: "contact", method: :get) do %>
+    <h3>詳細</h3>
+    <br></br>
+    <p>資格名：<%= @post.license_name %></p>
+    <p>取得者：<%= @post.holder_name %></p>
+    <p>取得日：<%= @post.date_of_license%></p>
+    <br></br>
+    <h4>最終更新</h4>
+    <h4>
+      <%= @post.last_editor %>
+      <%= @post.updated_at %>
+    </h4>
+    <button class="col-sm-1" name="submit" type="submit" id="contact-submit" data-submit="...Sending">戻る</button>
+  <% end %>
+</div>

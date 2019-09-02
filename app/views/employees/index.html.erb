@@ -14,14 +14,12 @@
     </thead>
 
     <% @employee.each do |employee| %>
-    <tbody>
       <tr>
         <td><%= link_to(employee.j_code, "/employees/#{employee.id}") %></td>
         <td><%= link_to(employee.name, "/employees/#{employee.id}") %></td>
         <td><%= link_to(employee.department, "/employees/#{employee.id}") %></td>
         <td><%= link_to(employee.section, "/employees/#{employee.id}") %></td>
       </tr>
-    </tbody>
     <% end %>
   </table>
 </div>

@@ -1,30 +1,14 @@
-<div class="main posts-new">
-  <div class="container">
-    <h1 class="form-heading">編集する</h1>
-    
-    <%= form_tag("/posts/#{@post.id}/update") do %>
-    <div class="form">
-      <div class="form-body">
+<div class="container">
+  <%= form_tag("/posts/#{@post.id}/update",id: "contact") do %>
+    <h3>取得情報編集</h3>
+    <h4>日付のみ編集できます</h4>
+    <br></br>
 
-          <!--取得日入力　エラー表示  -->
-         <% @post.errors.full_messages.each do |message| %>
-            <div class="form-error">
-              <%= message %>
-            </div>
-          <% end %>
-
-          <p>資格名
-            <%= @post.license_name %>
-          </p>
-          <p>取得者
-          <%= @post.holder_name %>
-          </p>
-          取得日
-          <textarea name="date_of_license"><%= @post.date_of_license %></textarea>
-          ※入力は　半角YYYY-MM-DDで入力 
-          <input type="submit" value="保存">
-      </div>
-    </div>
-    <% end %>
-  </div>
+          <p>資格名：<%= @post.license_name %></p>
+          <p>取得者：<%= @post.holder_name %></p>
+          取得日：
+          <input value="<%= @post.date_of_license %>" class="col-sm-5" name="date_of_license" placeholder="資格取得日を入力" type="text" required autofocus>
+          <h4>※入力は　半角YYYY-MM-DDで入力</h4>
+          <button class="col-sm-2" name="submit" type="submit" id="contact-submit" data-submit="...Sending">更新</button>
+  <% end %>
 </div>
