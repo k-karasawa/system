@@ -1,71 +1,72 @@
-<div class="main employeees-show">
-  <div class="container">
-    <div class="employees-show-item">
-        
-        <p>従業員コード
-            <%= @employee.j_code %>
-        </p>
-        
-        <p>氏名
-            <%= @employee.name %>
-        </p>
+<div class="container">
+    <table id="dtBasicExample" class="tbset table table-hover table table-sm" cellspacing="0" width="200%">
+        <tbody>
+        <tr>
+            <th style="width: 25%">従業員コード</th>
+            <td style="width: 25%"><%= @employee.j_code %></td>
+        </tr>
+       <tr>
+            <th>氏名</th>
+            <td><%= @employee.name %></td>
+        </tr>
+        <tr>
+            <th>部署</th>
+            <td><%= @employee.department %></td>
+        </tr>
+        <tr>
+            <th>課</th>
+            <td><%= @employee.section %></td>
+        </tr>
+        <tr>
+            <th>入社年月日</th>
+            <td><%= @employee.join_date %></td>
+        </tr>
+        <tr>
+            <th>勤続年数</th>
+            <td><%= @employee.experience %></td>
+        </tr>
+        <tr>
+            <th>区分</th>
+            <td><%= @employee.division %></td>
+        </tr>
+        <tr>
+            <th>生年月日</th>
+            <td><%= @employee.date_of_birth %></td>
+        </tr>
+        <tr>
+            <th>血液型</th>
+            <td><%= @employee.blood_type %></td>
+        </tr>
+        <tr>
+            <th>住所</th>
+            <td><%= @employee.address %></td>
+        </tr>
+        <tr>
+            <th>phone1</th>
+            <td><%= @employee.phone1 %></td>
+        </tr>
+        <tr>
+            <th>phone2</th>
+            <td><%= @employee.phone2 %></td>
+        </tr>
+        <tr>
+            <th>最終学歴</th>
+            <td><%= @employee.education %></td>
+        </tr>
+        <tr>
+            <th>卒業</th>
+            <td><%= @employee.graduation %></td>
+        </tr>
+        <tr>
+            <th>指定学科</th>
+            <td><%= @employee.specified_dpt %></td>
+        </tr>
+        </tbody>
+    </table>
 
-        <p>部署
-            <%= @employee.department %>
-        </p>
-        
-        <p>課
-            <%= @employee.section %>
-        </p>
-
-        <p>入社年月日
-            <%= @employee.join_date %>
-        </p>
-
-        <p>勤続年数
-            <%= @employee.experience %>
-        </p>
-
-        <p>区分
-            <%= @employee.division %>
-        </p>
-
-        <p>生年月日
-            <%= @employee.date_of_birth %>
-        </p>
-
-        <p>血液型
-            <%= @employee.blood_type %>
-        </p>
-
-        <p>住所
-            <%= @employee.address %>
-        </p>
-
-        <p>phone1
-            <%= @employee.phone1 %>
-        </p>
-
-        <p>phone2
-            <%= @employee.phone2 %>
-        </p>
-
-        <p>最終学歴
-            <%= @employee.education %>
-        </p>
-
-        <p>卒業
-            <%= @employee.graduation %>
-        </p>
-
-        <p>指定学科
-            <%= @employee.specified_dpt %>
-        </p>
-
-      <div class="employee-time">
-        最終更新<br>
+    <div class="contact">
+        <p>最終更新　
         <%= @employee.updated_at %>
-      </div>
+        </p>
     </div>
-  </div>
 </div>
