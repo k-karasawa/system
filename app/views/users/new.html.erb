@@ -1,27 +1,19 @@
-<div class="main users-new">
-  <div class="container">
-    <div class="form-heading">新規利用登録</div>
-    <div class="form users-form">
-      <div class="form-body">
-
+<body class="text-center">
+  <%= form_tag("/users/create", class: "signin") do %>
+    <%= image_tag('bibi.png', :size => '110x110')%>
+    <h1 class="h3 mb-3 font-weight-normal">利用登録</h1>
       <!--エラー表示用-->
       <% @user.errors.full_messages.each do |message| %>
-          <div class="form-error">
-            <%= message %>
-          </div>
-        <% end %>
+        <div class="form-error">
+          <%= message %>
+        </div>
+      <% end %>
 
-        <%= form_tag("/users/create") do %>
-          <p>従業員コード</p>
-          <input name="user_id" value="<%= @user.user_id %>">
-          <p>氏名</p>
-          <input name="user_name" value="<%= @user.user_name %>">
-          <p>パスワード</p>
-          <input name="password" type="password" value="<%= @user.password %>">
-          <input type="submit" value="新規登録">
-        <% end %>
-        ※氏名の間にスペースは不要です
-      </div>
-    </div>
-  </div>
-</div>
+      <!--入力フォーム-->
+    <input value="<%= @user_id %>" name="user_id" type="text" id="inputEmail" class="form-control" placeholder="従業員コード" required autofocus>
+    <input name="user_name" type="text" id="inputEmail" class="form-control" placeholder="氏名　　※氏名間のスペース不要" required>
+    <input name="password" type="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color:#00bfff" >サインイン</button>
+  <% end %>
+    <p class="mt-5 mb-3 text-muted">&copy; 影山鉄工所</p>
+</body>
