@@ -11,20 +11,17 @@
         <th class="th-sm">サーベイランス</th>
         <th class="th-sm">製造推奨</th>
         <th class="th-sm">事務推奨</th>
-        <th class="th-sm">編集</th>
-        <th class="th-sm">削除</th>
       </tr>
     </thead>
   <!--リスト表示-->    
     <% @license.each do |license| %>
       <tr>
-        <td><%= link_to(license.license_name, "/licenses/#{license.id}") %></td>
-        <td><%= link_to(license.expiration, "/licenses/#{license.id}") %></td>
-        <td><%= link_to(license.surveillance, "/licenses/#{license.id}") %></td>
-        <td><%= link_to(license.S_recommendation, "/licenses/#{license.id}") %></td>
-        <td><%= link_to(license.J_recommendation, "/licenses/#{license.id}") %></td>
-        <td><%= link_to("✔","/licenses/#{license.id}/edit")%></td>
-        <td><%= link_to("✖", "/licenses/#{license.id}/destroy", method: :post) %></td>
+        <td><%= link_to(license.license_name, "/licenses/#{license.id}", remote: true) %></td>
+        <td><%= link_to(license.expiration, "/licenses/#{license.id}", remote: true) %></td>
+        <td><%= link_to(license.surveillance, "/licenses/#{license.id}", remote: true) %></td>
+        <td><%= link_to(license.S_recommendation, "/licenses/#{license.id}", remote: true) %></td>
+        <td><%= link_to(license.J_recommendation, "/licenses/#{license.id}", remote: true) %></td>
+        <div id="licenses-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
       </tr>
     <% end %>
   </table>

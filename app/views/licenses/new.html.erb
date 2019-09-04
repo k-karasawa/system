@@ -26,10 +26,10 @@
         <label for="b_rb2" class="radio-label">：無</label>
     </div>
     <fieldset>
-      <input class="col-sm-5" name="S_recommendation" placeholder="製造所属の取得推奨年を半角数字で入力" type="text" required>
+      <input value="<%= @license.S_recommendation %>" class="col-sm-5" name="S_recommendation" placeholder="製造所属の取得推奨年を半角数字で入力" type="text" required>
     </fieldset>
     <fieldset>
-      <input class="col-sm-5" name="J_recommendation" placeholder="事務所属の取得推奨年を半角数字で入力" type="text" required>
+      <input value="<%= @license.J_recommendation %>" class="col-sm-5" name="J_recommendation" placeholder="事務所属の取得推奨年を半角数字で入力" type="text" required>
     </fieldset>
 
     <fieldset>

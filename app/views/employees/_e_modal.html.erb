@@ -1,0 +1,74 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <table id="dtBasicExample" class="tbset table table-hover table table-sm" cellspacing="0" widtd="200%">
+        <tbody>
+        <tr>
+            <td style="widtd: 25%">従業員コード</td>
+            <td style="widtd: 25%"><%= @employee.j_code %></td>
+        </tr>
+       <tr>
+            <td>氏名</td>
+            <td><%= @employee.name %></td>
+        </tr>
+        <tr>
+            <td>部署</td>
+            <td><%= @employee.department %></td>
+        </tr>
+        <tr>
+            <td>課</td>
+            <td><%= @employee.section %></td>
+        </tr>
+        <tr>
+            <td>入社年月日</td>
+            <td><%= @employee.join_date %></td>
+        </tr>
+        <tr>
+            <td>勤続年数</td>
+            <td><%= @employee.experience %></td>
+        </tr>
+        <tr>
+            <td>区分</td>
+            <td><%= @employee.division %></td>
+        </tr>
+        <tr>
+            <td>生年月日</td>
+            <td><%= @employee.date_of_birth %></td>
+        </tr>
+        <tr>
+            <td>血液型</td>
+            <td><%= @employee.blood_type %></td>
+        </tr>
+        <tr>
+            <td>住所</td>
+            <td><%= @employee.address %></td>
+        </tr>
+        <tr>
+            <td>phone1</td>
+            <td><%= @employee.phone1 %></td>
+        </tr>
+        <tr>
+            <td>phone2</td>
+            <td><%= @employee.phone2 %></td>
+        </tr>
+        <tr>
+            <td>最終学歴</td>
+            <td><%= @employee.education %></td>
+        </tr>
+        <tr>
+            <td>卒業</td>
+            <td><%= @employee.graduation %></td>
+        </tr>
+        <tr>
+            <td>指定学科</td>
+            <td><%= @employee.specified_dpt %></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="contact">
+        <p>最終更新　
+        <%= @employee.updated_at %>
+        </p>
+    </div>
+  </div>
+</div>

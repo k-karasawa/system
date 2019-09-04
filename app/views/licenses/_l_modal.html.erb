@@ -1,0 +1,43 @@
+<div class="modal-dialog">
+  <div class="modal-content">   
+    <%= form_tag("/licenses/#{@license.id}/update", id: "contact") do %>
+      <h3>資格情報編集</h3>
+      <h4>資格名は編集できません</h4>
+        <fieldset>
+          <input value="<%= @license.license_name %>" class="col-sm-5" name="license_name" readonly="readonly" type="text" required autofocus >
+        </fieldset>
+
+      <h4>有効期限</h4>
+        <div class="radio">
+          <input id="a_rb1" name="expiration" type="radio" value="無期限" checked>
+            <label for="a_rb1" class="radio-label">：無期限　</label>
+          <input id="a_rb2" name="expiration" type="radio" value="1年">
+          <label for="a_rb2" class="radio-label">：1年　</label>
+          <input id="a_rb3" name="expiration" type="radio" value="3年">
+            <label for="a_rb3" class="radio-label">：3年　</label>
+          <input id="a_rb4" name="expiration" type="radio" value="5年">
+            <label for="a_rb4" class="radio-label">：5年　</label>
+        </div>
+
+      <h4>サーベイランス</h4>
+        <div class="radio">
+          <input id="b_rb1" type="radio" name="surveillance" value="有" checked>
+            <label for="b_rb1" class="radio-label">：有</label>
+          <input id="b_rb2" type="radio" name="surveillance" value="無">
+            <label for="b_rb2" class="radio-label">：無</label>
+        </div>
+
+      <fieldset>
+        <input value="<%= @license.S_recommendation %>" class="col-sm-5" name="S_recommendation" placeholder="製造所属の取得推奨年を半角数字で入力" type="text" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input value="<%= @license.J_recommendation %>" class="col-sm-5" name="J_recommendation" placeholder="事務所属の取得推奨年を半角数字で入力" type="text" required>
+      </fieldset>
+      <h4>※入力は　半角YYYY-MM-DDで入力</h4>
+      <fieldset>
+        <button class="col-sm-2" name="submit" type="submit" id="contact-submit">更新</button>
+        <%= link_to("削除","/licenses/#{@license.id}/destroy", class: "col-sm-2", method: :post) %>
+      </fieldset>
+    <% end %>
+  </div>
+</div>

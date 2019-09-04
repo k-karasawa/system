@@ -3,15 +3,21 @@
     <h3>取得登録</h3>
     <h4>新規取得情報を登録します</h4>
     <fieldset>
-      <input class="col-sm-5" name="license_name" placeholder="取得した資格名を入力" type="text" required autofocus>
+      <input value="<%= @post.license_name %>" class="col-sm-5" name="license_name" placeholder="取得した資格名を入力" type="text" required autofocus>
     </fieldset>
     <fieldset>
-      <input class="col-sm-5" name="holder_name" placeholder="資格取得者の氏名を入力" type="text" required>
+      <input value="<%= @post.holder_name %>" class="col-sm-5" name="holder_name" placeholder="資格取得者の氏名を入力" type="text" required>
     </fieldset>
     <fieldset>
-      <input class="col-sm-5" name="date_of_license" placeholder="取得日を入力" type="text" required>
+      <input value="<%= @post.date_of_license %>" class="col-sm-5" name="date_of_license" placeholder="取得日を入力" type="text" required>
     <fieldset>
       <button class="col-sm-2" type="submit">登録</button>
     </fieldset>
   <% end %>
+     <!--エラー表示  -->
+         <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
 </div>

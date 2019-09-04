@@ -1,0 +1,15 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <%= form_tag("/posts/#{@post.id}/update",id: "contact") do %>
+      <h3>取得情報編集</h3>
+      <h4>日付のみ編集できます</h4>
+      <p>資格名：<input value="<%= @post.license_name %>" class="col-sm-5" name="date_of_license" placeholder="資格取得日を入力" type="text" readonly="readonly"></p>
+      <p>取得者：<input value="<%= @post.holder_name %>" class="col-sm-5" name="date_of_license" placeholder="資格取得日を入力" type="text" readonly="readonly"></p>
+      <p>取得日：<input value="<%= @post.date_of_license %>" class="col-sm-5" name="date_of_license" placeholder="資格取得日を入力" type="text" required autofocus></p>
+      <h4>※入力は　半角YYYY-MM-DDで入力</h4>
+      <button class="col-sm-2" name="submit" type="submit" id="contact-submit" data-submit="...Sending">更新</button>
+      <%= link_to("削除","/posts/#{@post.id}/destroy", class: "col-sm-2", method: :post) %>
+    <% end %>
+  </div>
+</div>
+

@@ -27,21 +27,17 @@
           <th class="th-sm">資格名</th>
           <th class="th-sm">氏名</th>
           <th class="th-sm">取得日</th>
-          <th class="th-sm">編集</th>
-          <th class="th-sm">削除</th>
         </tr>
       </thead>
    
-
       <!--リスト表示-->
       <tbody>
         <% @post.each do |post| %>
           <tr>
-            <td><%= link_to(post.license_name, "/posts/#{post.id}") %></td>
-            <td><%= link_to(post.holder_name, "/posts/#{post.id}") %></td>
-            <td><%= link_to(post.date_of_license, "/posts/#{post.id}") %></td>
-            <td><%= link_to("✔","/posts/#{post.id}/edit")%></td>
-            <td><%= link_to("✖","/posts/#{post.id}/destroy", method: :post)%></td>
+            <td><%= link_to(post.license_name, "/posts/#{post.id}", remote: true) %></td>
+            <td><%= link_to(post.holder_name, "/posts/#{post.id}", remote: true) %></td>
+            <td><%= link_to(post.date_of_license, "/posts/#{post.id}", remote: true) %></td>
+            <div id="posts-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
           <tr>
         <% end %>
       </tbody>

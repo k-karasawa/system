@@ -15,10 +15,11 @@
 
     <% @employee.each do |employee| %>
       <tr>
-        <td><%= link_to(employee.j_code, "/employees/#{employee.id}") %></td>
-        <td><%= link_to(employee.name, "/employees/#{employee.id}") %></td>
-        <td><%= link_to(employee.department, "/employees/#{employee.id}") %></td>
-        <td><%= link_to(employee.section, "/employees/#{employee.id}") %></td>
+        <td><%= link_to(employee.j_code, "/employees/#{employee.id}", remote: true) %></td>
+        <td><%= link_to(employee.name, "/employees/#{employee.id}", remote: true) %></td>
+        <td><%= link_to(employee.department, "/employees/#{employee.id}", remote: true) %></td>
+        <td><%= link_to(employee.section, "/employees/#{employee.id}", remote: true) %></td>
+        <div id="employees-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
       </tr>
     <% end %>
   </table>

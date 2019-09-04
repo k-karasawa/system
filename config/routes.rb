@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   post "logout" => "users#logout"
   get "login_form" => "users#login"
   get "login" => "users#login_form"
+  get "users/create" => "users#new"
   
   
   root to: "users#login_form"
