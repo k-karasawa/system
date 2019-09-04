@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: li_manager_production
-  username: li_manager
-  password: <%= ENV['LI_MANAGER_DATABASE_PASSWORD'] %>
+  username: karasawa
+  password: 2kasumi@
+  #<%= ENV['LI_MANAGER_DATABASE_PASSWORD'] %>
