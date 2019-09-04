@@ -2,7 +2,6 @@
   <%= form_tag("/users/create", class: "signin") do %>
     <%= image_tag('login_icon.png', :size => '110x110')%>
     <h1 class="h3 mb-3 font-weight-normal">利用登録</h1>
-    
       <!--エラー表示用-->
       <% @user.errors.full_messages.each do |message| %>
         <div class="form-error">
