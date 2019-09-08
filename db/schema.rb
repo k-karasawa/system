@@ -10,17 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_17_162055) do
+ActiveRecord::Schema.define(version: 2019_09_08_071637) do
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "j_code"
+    t.string "name"
+    t.string "department"
+    t.string "section"
+    t.date "join_date"
+    t.integer "experience"
+    t.string "division"
+    t.date "date_of_birth"
+    t.string "blood_type"
+    t.string "address"
+    t.string "phone1"
+    t.string "phone2"
+    t.string "education"
+    t.date "graduation"
+    t.string "specified_dpt"
   end
 
   create_table "licenses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "license_name", limit: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "expiration"
+    t.string "surveillance"
+    t.integer "S_recommendation"
+    t.integer "J_recommendation"
+    t.string "last_editor"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -29,6 +49,7 @@ ActiveRecord::Schema.define(version: 2019_08_17_162055) do
     t.date "date_of_license"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "last_editor"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -38,24 +59,6 @@ ActiveRecord::Schema.define(version: 2019_08_17_162055) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "user_id", unique: true
-  end
-
-  create_table "元_post", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "id"
-    t.string "license_name"
-    t.string "holder_name"
-    t.string "date_of_license"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "資格一覧", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "ID"
-    t.string "資格名"
-    t.string "有効期限"
-    t.binary "サーベイランス有無", limit: 1
-    t.integer "事務取得推奨年数"
-    t.integer "製造取得推奨年数"
   end
 
 end
