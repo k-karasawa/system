@@ -15,5 +15,6 @@ class AddcolumnEmployees < ActiveRecord::Migration[5.2]
     add_column :employees, :education, :string
     add_column :employees, :graduation, :date
     add_column :employees, :specified_dpt, :string
+    
   end
 end
