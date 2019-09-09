@@ -1,0 +1,25 @@
+<div class="container">
+    <h3>管理者用ページ</h3>
+    <p>このページからは従業員情報の登録/変更が行えます</p>
+
+  <table id="dtBasicExample" class="tbset table table-hover table table-sm" cellspacing="0" width="100%">
+  <!--カラム名表示-->
+    <thead>
+      <tr>
+        <th class="th-sm">従業員コード</th>
+        <th class="th-sm">氏名</th>
+        <th class="th-sm">部署</th>
+        <th class="th-sm">課</th>
+      </tr>
+    </thead>
+
+    <% @employee.each do |employee| %>
+      <tr>
+        <td><%= link_to(employee.j_code, "/employees/#{employee.id}") %></td>
+        <td><%= link_to(employee.name, "/employees/#{employee.id}") %></td>
+        <td><%= link_to(employee.department, "/employees/#{employee.id}") %></td>
+        <td><%= link_to(employee.section, "/employees/#{employee.id}") %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

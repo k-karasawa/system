@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
 
-  get 'home/top' => "home#top"
-  get "employees/index" => "employees#index"
-  get "employees/:id" => "employees#show"
 
+  post "employees/:id/destroy" => "employees#destroy"
+  post "employees/update"=> "employees#update"
+  post "employees/create" => "employees#create"
+  get "employees/management" => "employees#management"
+  get "employees/registration" => "employees#registration"
+  get "employees/index" => "employees#index"
+  get "employees/:id" => "employees#edit"
+  post "employees/:id/update" => "employees#update"
+  get "employees/:id/edit" => "employees#edit"
   
   get "licenses/index" => "licenses#index"
   get "licenses/show" => "licenses#show"
