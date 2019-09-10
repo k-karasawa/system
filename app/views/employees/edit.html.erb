@@ -3,10 +3,10 @@
     <h3>従業員情報登録</h3>
     <h4>従業員情報を編集します</h4>
 
-        <input value="<%= @employee.j_code %>" class="col-sm-5" name="j_code" placeholder="従業員コードを入力" type="text" required autofocus>
-        <input value="<%= @employee.name %>" class="col-sm-5" name="name" placeholder="氏名を入力" type="text" required >
-        <input value="<%= @employee.department %>" class="col-sm-5" name="department" placeholder="部署を入力" type="text" required >
-        <input value="<%= @employee.section %>" class="col-sm-5" name="section" placeholder="課を入力" type="text" required >
+        <input value="<%= @employee.j_code %>" class="col-sm-5" name="j_code" placeholder="従業員コードを入力" type="text" readonly="readonly" required >
+        <input value="<%= @employee.name %>" class="col-sm-5" name="name" placeholder="氏名を入力" type="text" readonly="readonly"   required >
+        <input value="<%= @employee.department %>" class="col-sm-4" name="department" placeholder="部署を入力　　※' 部 'は入れない" type="text" required autofocus>　　  　 部　
+        <input value="<%= @employee.section %>" class="col-sm-4" name="section" placeholder="課を入力   ※課は入れない" type="text" required >　　  　 課　
         <input value="<%= @employee.join_date %>" class="col-sm-5" name="join_date" placeholder="入社年月日を入力" type="text" required >
         <input value="<%= @employee.experience %>" class="col-sm-5" name="experience" placeholder="勤続年数を入力" type="text" required >
         <input value="<%= @employee.division %>" class="col-sm-5" name="division" placeholder="区分を入力　　製造 or 事務" type="text" required >
@@ -17,13 +17,7 @@
         <input value="<%= @employee.phone2 %>" class="col-sm-5" name="phone2" placeholder="phone2を入力" type="text" required >
         <input value="<%= @employee.education %>" class="col-sm-5" name="education" placeholder="最終学歴を入力" type="text" required >
         <input value="<%= @employee.graduation %>" class="col-sm-5" name="graduation" placeholder="卒業年月日を入力" type="text" required >
-    <h4>指定学科</h4>
-    <div class="radio">
-      <input id="a_rb1" name="specified_dpt" type="radio" value="その他" checked>
-        <label for="a_rb1" class="radio-label">：その他</label>
-      <input id="a_rb2" name="specified_dpt" type="radio" value="指定学科">
-        <label for="a_rb2" class="radio-label">：指定学科　</label>
-    </div>
+        <input value="<%= @employee.specified_dpt %>" class="col-sm-5" name="specified_dpt" placeholder="指定学科卒業でなければ空白" type="text" required >
 
     <fieldset>
       <button class="col-sm-2" name="submit" type="submit" id="contact-submit">更新</button>

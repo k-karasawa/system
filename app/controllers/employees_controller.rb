@@ -1,5 +1,6 @@
 class EmployeesController < ApplicationController
   before_action :authenticate_user
+  before_action :administrators, only: [:registration, :create, :management, :update, :destroy]
 
   def index
     @employee = Employee.all
@@ -9,6 +10,7 @@ class EmployeesController < ApplicationController
     @employee = Employee.find_by(id: params[:id])
   end
 
+#こっから下は管理者用
   def registration
     @employee = Employee.new(
       j_code: params[:j_code],
@@ -50,7 +52,7 @@ class EmployeesController < ApplicationController
 
     if @employee.save
       flash[:notice] = "1件登録しました"
-      redirect_to("/employees/index")     
+      redirect_to("/employees/management")     
     else
       render("employees/registration")
     end

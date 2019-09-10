@@ -20,6 +20,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
+  def administrators
+    if @current_user.user_id != "1022"
+      flash[:notice] = "この操作は許可されていません"
+      redirect_back(fallback_location: root_path)
+    end
+  end
 
 end

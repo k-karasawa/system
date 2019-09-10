@@ -5,11 +5,13 @@ class PostsController < ApplicationController
     @post = Post.search(params[:search])
   end
 
+
   def new
     @post = Post.new(license_name: params[:license_name],
       holder_name: params[:holder_name],
       date_of_license: params[:date_of_license])
   end
+
 
   def show
     @post = Post.find_by(id: params[:id])
@@ -27,12 +29,13 @@ class PostsController < ApplicationController
     else
       render("posts/new")
     end
-
   end
+
 
   def edit
     @post = Post.find_by(id: params[:id])
   end
+
 
   def update
     @post = Post.find_by(id: params[:id])
@@ -47,11 +50,13 @@ class PostsController < ApplicationController
     end
   end
 
+
   def destroy
     flash[:notice] = "1件削除しました"
     @post = Post.find_by(id: params[:id])
     @post.destroy
     redirect_to("/posts/index")
   end
+
 
 end

@@ -4,7 +4,7 @@
       <div class="btn-group">
         <div class="posts-index-item">
           <!--選択ボックス-->
-          <%= select_tag :search, options_from_collection_for_select(License.all,:license_name, :license_name), {include_blank: true, :onchange => "this.form.submit()"}  %>   
+          <%= select_tag :search, options_from_collection_for_select(License.all,:license_name, :license_name), {include_blank: true, :onchange => "this.form.submit()"}  %> 
           ：資格名を選択してください
         </div>
       </div>
@@ -17,7 +17,7 @@
     <div class="container">
       <%= @post.count%>件　
     <!--クリアボタン-->
-      <a href="/posts/index" class="border_slide_btnm">クリア</a>
+    <button class="cp_button12" onclick="location.href='/posts/index'">クリア</button>
     </div>
 
     <!--カラム名-->

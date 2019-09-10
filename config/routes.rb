@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post "employees/:id/update" => "employees#update"
   get "employees/:id/edit" => "employees#edit"
   
+  
   get "licenses/index" => "licenses#index"
   get "licenses/show" => "licenses#show"
   get "licenses/new" => "licenses#new"
@@ -30,7 +31,8 @@ Rails.application.routes.draw do
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
 
-    
+  
+  get "users/index" => "users#index"
   post "users/create" => "users#create"
   get "signup" => "users#new"
   post "login" => "users#login"
@@ -38,7 +40,7 @@ Rails.application.routes.draw do
   get "login_form" => "users#login"
   get "login" => "users#login_form"
   get "users/create" => "users#new"
-  
+  post "users/:id/destroy" => "users#destroy"
   
   root to: "users#login_form"
 

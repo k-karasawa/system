@@ -1,0 +1,23 @@
+<div class="container">
+  <h3>ユーザー管理</h3>
+  <br></br>
+  <!--カラム名表示-->
+  <table id="dtBasicExample" class="tbset table table-hover table table-sm" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th class="th-sm">従業員コード</th>
+        <th class="th-sm">氏名</th>
+        <th class="th-sm">削除</th>
+      </tr>
+    </thead>
+  <!--リスト表示-->    
+    <% @user.each do |user| %>
+      <tr>
+        <td><%= user.user_id %></td>
+        <td><%= user.user_name %></td>
+        <td><%= link_to("✖", "/users/#{user.id}/destroy") %></td>
+        <div id="users-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+      </tr>
+    <% end %>
+  </table>
+</div>

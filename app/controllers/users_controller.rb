@@ -33,19 +33,27 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(user_id: params[:user_id], user_name: params[:user_name], password: params[:password])
-
+		@user = User.new(user_id: params[:user_id], user_name: params[:user_name], password: params[:password], admin: params[:admin])
 		if @user.save
 			session[:user_id] = @user.id
 			flash[:notice] = "利用者登録が完了しました"
 		  	redirect_to("/posts/index")
-			#redirect_to("/signup")
-
 		else
 			render("users/new")
-
 		end
+	end
 
+
+	def index
+		@user = User.all
+	end
+
+
+	def destroy
+    flash[:notice] = "1件削除しました"
+    @user = User.find_by(id: params[:id])
+    @user.destroy
+    redirect_to("/users/index")
 	end
 
 	

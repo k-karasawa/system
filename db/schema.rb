@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_08_071637) do
+ActiveRecord::Schema.define(version: 2019_09_10_063953) do
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -58,8 +58,8 @@ ActiveRecord::Schema.define(version: 2019_09_08_071637) do
     t.string "password", limit: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "admin"
     t.index ["user_id"], name: "user_id", unique: true
-    
   end
 
 end
