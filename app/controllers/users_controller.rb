@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
 	before_action :forbid_login_user, {only: [:login, :login_form]}
+	before_action :administrators, {only: [:index, :destroy, :show, :add_administrator, :del_administrator]}
 
-	def login_form
-	end
+		def login_form
+		end
 
 
 	def login
@@ -44,6 +45,8 @@ class UsersController < ApplicationController
 	end
 
 
+
+	#ここから下、管理者権限で制限アクション
 	def index
 		@user = User.all
 	end
@@ -56,5 +59,31 @@ class UsersController < ApplicationController
     redirect_to("/users/index")
 	end
 
+
+	def show
+		@user = User.find_by(id: params[:id])
+	end
+
 	
+	def add_administrator
+		@user = User.find_by(id: params[:id])
+    @user.admin = "1"
+
+    if @user.save
+      flash[:notice] = "管理者権限を付与しました"
+      redirect_to("/users/index")
+    end
+	end
+	
+	def del_administrator
+		@user = User.find_by(id: params[:id])
+    @user.admin = "0"
+
+    if @user.save
+      flash[:notice] = "管理者権限を削除しました"
+      redirect_to("/users/index")
+    end
+	end
+
+
 end

@@ -5,5 +5,7 @@ class AddcolumnLicenses < ActiveRecord::Migration[5.2]
     add_column :licenses, :S_recommendation, :integer
     add_column :licenses, :J_recommendation, :integer
     add_column :licenses, :last_editor, :string
+    add_column :licenses, :allowance, :integer
+    add_column :licenses, :bonus, :integer
   end
 end

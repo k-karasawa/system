@@ -25,11 +25,19 @@
       <input id="b_rb2" type="radio" name="surveillance" value="無">
         <label for="b_rb2" class="radio-label">：無</label>
     </div>
+
     <fieldset>
       <input value="<%= @license.S_recommendation %>" class="col-sm-5" name="S_recommendation" placeholder="製造所属の取得推奨年を半角数字で入力" type="text" required>
     </fieldset>
     <fieldset>
       <input value="<%= @license.J_recommendation %>" class="col-sm-5" name="J_recommendation" placeholder="事務所属の取得推奨年を半角数字で入力" type="text" required>
+    </fieldset>
+
+    <fieldset>
+      <input value="<%= @license.allowance %>" class="col-sm-5" name="allowance" placeholder="毎月の手当て金額を入力" type="text" required autofocus>
+    </fieldset>
+    <fieldset>
+        <input value="<%= @license.bonus %>" class="col-sm-5" name="bonus" placeholder="賞与時の手当て金額を入力" type="text" required>
     </fieldset>
 
     <fieldset>

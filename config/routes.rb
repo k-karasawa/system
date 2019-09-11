@@ -33,6 +33,9 @@ Rails.application.routes.draw do
 
   
   get "users/index" => "users#index"
+  get "users/:id" => "users#show"
+  post "users/:id/add_administrator" => "users#add_administrator"
+  post "users/:id/del_administrator" => "users#del_administrator"  
   post "users/create" => "users#create"
   get "signup" => "users#new"
   post "login" => "users#login"
@@ -41,6 +44,7 @@ Rails.application.routes.draw do
   get "login" => "users#login_form"
   get "users/create" => "users#new"
   post "users/:id/destroy" => "users#destroy"
+  
   
   root to: "users#login_form"
 

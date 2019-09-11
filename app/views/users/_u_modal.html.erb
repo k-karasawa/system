@@ -1,0 +1,26 @@
+<div class="modal-dialog">
+  <div class="modal-content">   
+    <%= form_tag("/users/#{@user.id}/add_administrator", id: "contact") do %>
+      <h3>確認</h3>
+      <h4>管理者に追加すると、以下の事ができるようになります。</h4>
+      <ul>
+        <h4>・従業員の手当てに関する情報の閲覧</h4>
+        <h4>・従業員情報の編集</h4>
+        <h4>・システム利用者情報の編集、削除</h4>
+        <h4>・他の利用者への管理者権限付与</h4>
+      </ul>
+
+        <br></br>
+        <h4>このユーザーの権限を変更しますか？</h4>
+          <%= @user.user_name %>
+          <br></br>
+    
+        <button class="col-sm-3" name="submit" type="submit" id="contact-submit">管理者任命！</button>  
+    <% end %>
+
+    <%= form_tag("/users/#{@user.id}/del_administrator", id: "contact") do %>
+      <button class="col-sm-3" name="submit" type="submit" id="contact-submit">または解除！</button>
+    <% end %>
+   
+  </div>
+</div>

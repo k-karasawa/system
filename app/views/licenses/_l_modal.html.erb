@@ -33,6 +33,14 @@
       <fieldset>
         <input value="<%= @license.J_recommendation %>" class="col-sm-5" name="J_recommendation" placeholder="事務所属の取得推奨年を半角数字で入力" type="text" required>
       </fieldset>
+      
+      <fieldset>
+        <input value="<%= @license.allowance %>" class="col-sm-5" name="allowance" placeholder="毎月の手当て金額を入力" type="text" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input value="<%= @license.bonus %>" class="col-sm-5" name="bonus" placeholder="賞与時の手当て金額を入力" type="text" required>
+      </fieldset>
+
       <h4>※入力は　半角YYYY-MM-DDで入力</h4>
       <fieldset>
         <button class="col-sm-2" name="submit" type="submit" id="contact-submit">更新</button>

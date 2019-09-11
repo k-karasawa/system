@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2019_09_10_063953) do
   end
 
   create_table "licenses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "license_name", limit: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "expiration"
@@ -41,9 +40,12 @@ ActiveRecord::Schema.define(version: 2019_09_10_063953) do
     t.integer "S_recommendation"
     t.integer "J_recommendation"
     t.string "last_editor"
+    t.integer "allowance"
+    t.integer "bonus"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "license"
     t.string "license_name"
     t.string "holder_name"
     t.date "date_of_license"
@@ -53,13 +55,12 @@ ActiveRecord::Schema.define(version: 2019_09_10_063953) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_id", limit: 50
-    t.string "user_name", limit: 50
-    t.string "password", limit: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "admin"
-    t.index ["user_id"], name: "user_id", unique: true
+    t.integer "user_id", null: false
+    t.string "user_name", null: false
+    t.string "password", null: false
+    t.integer "admin", default: 0
   end
 
 end

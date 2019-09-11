@@ -7,16 +7,23 @@
       <tr>
         <th class="th-sm">従業員コード</th>
         <th class="th-sm">氏名</th>
-        <th class="th-sm">削除</th>
+        <th class="th-sm">管理者権限</th>
+        <th class="th-sm">アカウント削除</th>
+
       </tr>
     </thead>
   <!--リスト表示-->    
     <% @user.each do |user| %>
       <tr>
-        <td><%= user.user_id %></td>
-        <td><%= user.user_name %></td>
-        <td><%= link_to("✖", "/users/#{user.id}/destroy") %></td>
-        <div id="users-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+        <td><%= link_to(user.user_id, "/users/#{user.id}", remote: true) %></td>
+        <td><%= link_to(user.user_name, "/users/#{user.id}", remote: true) %></td>
+        <td><%= link_to(if user.admin == 1
+                          "　　有"
+                        else
+                          "　　無"
+                        end, "/users/#{user.id}", remote: true) %></td>
+        <td><%= link_to("　　✖", "/users/#{user.id}/destroy", method: :post) %></td>
+        <div id="licenses-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
       </tr>
     <% end %>
   </table>
