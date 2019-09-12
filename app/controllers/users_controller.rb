@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(user_id: params[:user_id], user_name: params[:user_name], password: params[:password], admin: params[:admin])
+		@user = User.new(user_id: params[:user_id], user_name: params[:user_name], password: params[:password])
 		if @user.save
 			session[:user_id] = @user.id
 			flash[:notice] = "利用者登録が完了しました"
@@ -77,7 +77,6 @@ class UsersController < ApplicationController
 	
 	def del_administrator
 		@user = User.find_by(id: params[:id])
-    @user.admin = "0"
 
     if @user.save
       flash[:notice] = "管理者権限を削除しました"
