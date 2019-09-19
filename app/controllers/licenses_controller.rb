@@ -13,7 +13,8 @@ class LicensesController < ApplicationController
       surveillance: params[:surveillance],
       S_recommendation: params[:S_recommendation],
       J_recommendation: params[:J_recommendation],
-      
+      allowance: params[:allowance],
+      bonus: params[:bonus]
       )
 
       if @license.save
