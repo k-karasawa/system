@@ -51,6 +51,8 @@ class LicensesController < ApplicationController
     @license.surveillance = params[:surveillance]
     @license.S_recommendation = params[:S_recommendation]
     @license.J_recommendation = params[:J_recommendation]
+    @license.J_recommendation = params[:allowance]
+    @license.J_recommendation = params[:bonus]
     @license.last_editor = @current_user.user_name
 
     if @license.save
