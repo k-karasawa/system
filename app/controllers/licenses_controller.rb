@@ -26,7 +26,7 @@ class LicensesController < ApplicationController
   end
 
   def index
-    @license = License.all
+    @license = License.all.order('license_name')
   end
 
   def show
@@ -51,8 +51,8 @@ class LicensesController < ApplicationController
     @license.surveillance = params[:surveillance]
     @license.S_recommendation = params[:S_recommendation]
     @license.J_recommendation = params[:J_recommendation]
-    @license.J_recommendation = params[:allowance]
-    @license.J_recommendation = params[:bonus]
+    @license.allowance = params[:allowance]
+    @license.bonus = params[:bonus]
     @license.last_editor = @current_user.user_name
 
     if @license.save

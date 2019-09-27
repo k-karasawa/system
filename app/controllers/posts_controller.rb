@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user
   
   def index
-    @post = Post.search(params[:search])
+    @post = Post.search(params[:search]).order('license_name')
   end
 
 
