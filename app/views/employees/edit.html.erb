@@ -20,7 +20,7 @@
         <input value="<%= @employee.specified_dpt %>" class="col-sm-5" name="specified_dpt" placeholder="指定学科卒業でなければ空白" type="text" required >
 
     <fieldset>
-      <button class="col-sm-2" name="submit" type="submit" id="contact-submit">更新</button>
+      <button class="col-sm-2" name="submit" type="submit" id="contact-submit">修正</button>
       <%= link_to("削除","/employees/#{@employee.id}/destroy", class: "col-sm-2", method: :post) %>
     </fieldset>
   <% end %>

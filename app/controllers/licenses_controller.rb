@@ -2,7 +2,7 @@ class LicensesController < ApplicationController
   before_action :authenticate_user
 
   def new
-    @license =License.new
+    @license = License.new
     @license_list = License.all
   end
 
