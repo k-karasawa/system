@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-
+  
   get "allowance/index" => "allowance#index"
+  get "allowance/:id" => "allowance#show"
 
   post "employees/:id/destroy" => "employees#destroy"
   post "employees/update"=> "employees#update"

@@ -1,0 +1,131 @@
+<!--サイドメニュー-->
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+            <h5>従業員リスト</h5>
+
+            <% @employees.each do |employee| %>
+              <li class="nav-item">
+                  <%= link_to(employee.name, "/allowance/#{employee.id}") %>
+              </li>
+            <% end %>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file"></span>
+                  オーダー
+                </a>
+              </li>
+             </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+          <a href="#">名前を出す</a>
+          <div class="table-responsive">
+            <table class="table table-hover table-sm">
+              <thead>
+                <tr>
+                  <th>資格名</th>
+                  <th>取得日</th>
+                  <th>手当金額/月</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,001</td>
+                  <td>あお</td>
+                  <td>交</td>
+                </tr>
+                <tr>
+                  <td>1,002</td>
+                  <td>いね</td>
+                  <td>鋼</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>うた</td>
+                  <td>抗</td>
+                </tr>
+                <tr>
+                  <td>1,004</td>
+                  <td>えま</td>
+                  <td>工</td>
+                </tr>
+                <tr>
+                  <td>1,005</td>
+                  <td>おか</td>
+                  <td>項</td>
+                </tr>
+                <tr>
+                  <td>1,006</td>
+                  <td>かさ</td>
+                  <td>孔</td>
+                </tr>
+                <tr>
+                  <td>1,007</td>
+                  <td>きじ</td>
+                  <td>構</td>
+                </tr>
+                <tr>
+                  <td>1,008</td>
+                  <td>くり</td>
+                  <td>高</td>
+                </tr>
+                <tr>
+                  <td>1,009</td>
+                  <td>けち</td>
+                  <td>孝</td>
+                </tr>
+                <tr>
+                  <td>1,010</td>
+                  <td>こま</td>
+                  <td>功</td>
+                </tr>
+                <tr>
+                  <td>1,011</td>
+                  <td>さら</td>
+                  <td>公</td>
+                </tr>
+                <tr>
+                  <td>1,012</td>
+                  <td>しか</td>
+                  <td>甲</td>
+                </tr>
+                <tr>
+                  <td>1,013</td>
+                  <td>すぎ</td>
+                  <td>候</td>
+                </tr>
+                <tr>
+                  <td>1,014</td>
+                  <td>せみ</td>
+                  <td>考</td>
+                </tr>
+                <tr>
+                  <td>1,015</td>
+                  <td>そと</td>
+                  <td>講</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- /.table-responsive -->
+        </main>
+      </div>
+    </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+  <!-- アイコン -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+  <script>
+    feather.replace()
+  </script>
+
+</body>
+
+</html>

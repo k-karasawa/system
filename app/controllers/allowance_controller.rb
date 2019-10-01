@@ -1,8 +1,13 @@
 class AllowanceController < ApplicationController
 
   def index
-    render :layout => nil
-    @allo = Employee.all
-    #all.order('name')
+    
+    @employees = Employee.all
   end
+
+  def show
+    @employees = Employee.all
+    @allowances = Post.where(id: params[:id])
+  end
+
 end
