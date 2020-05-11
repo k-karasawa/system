@@ -22,3 +22,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## how to start by docker-compose
+
+``` shell
+# build docker image
+$ docker-compose build
+
+# running container
+$ docker-compsoe up
+
+# create database and migration
+$ docker-compose run web bundle exec rails db:create
+$ docker-compose run web bundle exec rails db:migrate
+```
